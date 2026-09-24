@@ -1,0 +1,20 @@
+defaults:
+  - ldm
+  - _self_
+
+_target_: src.models.ldm_family_medoid_module.FamilyMedoidLatentDiffusionLitModule
+
+family_medoid_path: ${paths.data_dir}/family_centers.npz
+source_noise_scale: 0.1
+source_radius_fraction: 0.2
+family_probabilities:
+  - 19308
+  - 13216
+  - 17100
+  - 17708
+  - 14222
+  - 74230
+  - 25150
+  - 38
+  - 73041
+  - 28834

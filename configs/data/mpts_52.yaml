@@ -1,0 +1,26 @@
+datamodule:
+  _target_: src.data.csv_crystal_datamodule.CSVCrystalDataModule
+
+  root: ${paths.data_dir}/mpts_52
+  prop: formation_energy_per_atom
+  train_file: train.csv
+  val_file: val.csv
+  test_file: test.csv
+  processed_dir: ${paths.root_dir}/data/mpts_52_csv_processed
+
+  niggli: true
+  primitive: false
+  graph_method: crystalnn
+  tolerance: 0.1
+  use_space_group: false
+  preprocess_workers: 16
+
+  batch_size:
+    train: 256
+    val: 256
+    test: 256
+
+  num_workers:
+    train: 16
+    val: 16
+    test: 16

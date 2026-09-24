@@ -1,0 +1,13 @@
+defaults:
+  - ema
+  - model_checkpoint
+  # - early_stopping
+  # - learning_rate_monitor
+  - _self_
+
+model_checkpoint:
+  dirpath: ${paths.output_dir}/checkpoints
+  filename: "lfm-{epoch:04d}-{step}"
+  monitor: null
+  mode: "min"
+  save_last: True

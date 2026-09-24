@@ -1,0 +1,12 @@
+defaults:
+  - model_checkpoint
+  # - early_stopping
+  # - learning_rate_monitor
+  - _self_
+
+model_checkpoint:
+  dirpath: ${paths.output_dir}/checkpoints
+  filename: "vae-{epoch:04d}-{step}"
+  monitor: "train/loss_epoch"
+  mode: "min"
+  save_last: True
