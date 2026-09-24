@@ -1,9 +1,8 @@
 # Anonymous Review Code
 
 This package contains the training and inference implementation for the
-Transformer PBC-VAE and family-medoid latent flow-matching model used in the
-submission. It intentionally contains no datasets, checkpoints, generated
-samples, evaluation programs, author names, affiliations, or repository links.
+Transformer VAE and family-medoid latent flow-matching model used in the
+submission.
 
 ## Included code
 
